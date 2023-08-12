@@ -140,6 +140,7 @@ def edit(post_id):
                 new_post = Posts(title=title, subtitle=subtitle, slug=slug, content=content, subcontent=subcontent, img_uri=img_uri, bg_img_uri=bg_img_uri, date= datetime.now())
                 db.session.add(new_post)
                 db.session.commit()
+                return redirect('/dashboard')  
             else:
                 update_post = Posts.query.filter_by(id=post_id).first()
                 update_post.title = title
@@ -150,9 +151,12 @@ def edit(post_id):
                 update_post.img_uri = img_uri
                 update_post.bg_img_uri = bg_img_uri
                 db.session.commit()
-                return redirect('/edit/'+post_id)  
+                return redirect('/dashboard')  
         
         post = Posts.query.filter_by(id=post_id).first()
+        if post == None:
+            post = {'id': '0'}
+
         return render_template('edit.html', params=params, post= post)    
 
 @app.route('/upload', methods=['GET', 'POST'])
