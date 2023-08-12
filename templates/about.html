@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block title %} BlogSmashers - About Us {% endblock %}
+{% block body %}
+<header class="masthead" style="background-image: url( '{{ url_for('static', filename='assets/img/about-bg.jpg') }}' )">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="page-heading">
+                    <h1>About Me</h1>
+                    <span class="subheading">This is what I do.</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Main Content-->
+<main class="mb-4">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <p>Want to know all of the details about the latest products from Apple, Samsung, Google, and many others. The BlogSmashers is the place for all of that and more. Whether you’re looking for new Technology, how to use new Technology you already know, or the best we’ve tested and used ourselves and can recommend, you needn’t look any further.</p>
+                <p>We provide all the latest blogs for free. All the blogs related to technology and science are available for free on our website. Interested Technology? BlogSmashers is the perfect website any Tech addict can ask for. Join us for more details</p>
+                <p>Give us the feedback about our work. It will help us to improve the content in future times. Join us for more details and become the part of our family. One step closer towards future!</p>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock %}

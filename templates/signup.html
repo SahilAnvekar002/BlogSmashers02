@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block title %} BlogSmashers - Dashboard {% endblock %}
+{% block style %}
+<style>
+html,
+body {
+  height: 100%;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 1rem;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+#mainNav{
+  background: #313030 !important;
+}
+</style>
+{% endblock %}
+{% block body %}
+<main class="form-signin w-100 m-auto" style="height: 75vh;">
+  <form style="margin-top: 25vh !important;" action="/dashboard" method="post">
+    <h1 class="h3 mb-3 fw-normal">Admin Login</h1>
+    <div class="form-floating">
+      <input type="text" class="form-control" id="floatingInput" placeholder="username" name="username">
+      <label for="floatingInput">Username</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+      <label for="floatingPassword">Password</label>
+    </div>
+    <button class="btn btn-primary w-100 py-2" type="submit">Login</button>
+  </form>
+</main>
+{% endblock %}

@@ -1,0 +1,16 @@
+{
+    "params":{
+        "local_server": "True",
+        "local_uri":"mysql://root:@localhost/blogsmashers",
+        "prod_uri":"mysql://root:@localhost/blogsmashers",
+        "instagram_uri":"https://www.instagram.com/_itz_sahil_08/",
+        "facebook_uri":"https://www.facebook.com/sahil.anvekar.90",
+        "github_uri":"https://github.com/SahilAnvekar002",
+        "gmail_username":"sanvekar108@gmail.com",
+        "gmail_password":"qdnzxgbrqxhngzfw",
+        "admin_username": "sahil",
+        "admin_password": "sahil002",
+        "secret_key": "DTYFUYkgjhGJHJ152Hj",
+        "upload_path":"D:\\AllProjects\\AllProjects\\Flask\\Project1\\static\\assets\\img"
+    }
+}
