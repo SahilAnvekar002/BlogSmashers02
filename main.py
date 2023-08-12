@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, session, redirect
+from flask import Flask, render_template, request, session, redirect, flash
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import json
@@ -95,6 +95,7 @@ def contact():
         db.session.add(entry)
         db.session.commit()
         mail.send_message('BlogSmashers Message from '+ name, sender = email, recipients=[params['gmail_username']], body= message + '\n'+ phone+ '\n'+ email)
+        flash("Thanks for your feedbcak. We will get back to you soon", "success")
         return render_template('contact.html', params = params)
 
     return render_template('contact.html', params = params)
